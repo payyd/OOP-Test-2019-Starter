@@ -94,7 +94,6 @@ public class UI extends PApplet
 	public void settings()
 	{
 		size(500, 800);
-		background(169);
 		
 		separate(381);
 		separate(1);
@@ -159,6 +158,12 @@ public class UI extends PApplet
 	
 	public void draw()
 	{	
+		background(169);
+		render();
+	}
+
+	public void render()
+	{
 		noFill();
 		stroke(255);
 		//drawing resistor 1
@@ -180,12 +185,6 @@ public class UI extends PApplet
 		line(100,550, 200, 550);
 		rect(150, 500, 100,100);
 		line(300,550, 400, 550);
-
-
-	}
-
-	public void render()
-	{
 
 	}
 
