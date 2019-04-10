@@ -6,6 +6,7 @@ import processing.core.PApplet;
 import processing.data.Table;
 import processing.data.TableRow;
 
+/*Patrick Whelan C17478104 DT228-2*/
 public class UI extends PApplet
 
 {	
@@ -35,9 +36,13 @@ public class UI extends PApplet
 		print(hundreds + ",");
 		print(tens + ",");
 		println(ones);
+
+		FindColour(ones);
+		FindColour(tens);
+		FindColour(hundreds);
 	}
 
-	public	void FindColour(int value)
+	public void FindColour(int value)
 	{
 		for (UI colour : colours){
 			if (value == 1)
@@ -89,6 +94,7 @@ public class UI extends PApplet
 	public void settings()
 	{
 		size(500, 800);
+		background(169);
 		
 		separate(381);
 		separate(1);
@@ -153,6 +159,33 @@ public class UI extends PApplet
 	
 	public void draw()
 	{	
+		noFill();
+		stroke(255);
+		//drawing resistor 1
+		line(100,100, 150, 100);
+		rect(150, 50, 100,100);
+		line(300,100, 350, 100);
+
+		//resistor 2
+		line(100,250, 150, 250);
+		rect(155,200, 100,100);
+		line(300,250, 350, 250);
+
+		//resistor 3
+		line(100,400, 150, 400);
+		rect(150, 350, 100,100);
+		line(300,400, 350, 400);
+
+		//resistor 4
+		line(100,550, 150, 550);
+		rect(150, 500, 100,100);
+		line(300,550, 350, 550);
+
+
+	}
+
+	public void render()
+	{
 
 	}
 
@@ -298,90 +331,6 @@ public class UI extends PApplet
 	 */
 	public void setYellow(String yellow) {
 		this.yellow = yellow;
-	}
-
-	/**
-	 * @return the value
-	 */
-	public int getValue() {
-		return value;
-	}
-
-	/**
-	 * @param value the value to set
-	 */
-	public void setValue(int value) {
-		this.value = value;
-	}
-
-	/**
-	 * @return the ones
-	 */
-	public int getOnes() {
-		return ones;
-	}
-
-	/**
-	 * @param ones the ones to set
-	 */
-	public void setOnes(int ones) {
-		this.ones = ones;
-	}
-
-	/**
-	 * @return the tens
-	 */
-	public int getTens() {
-		return tens;
-	}
-
-	/**
-	 * @param tens the tens to set
-	 */
-	public void setTens(int tens) {
-		this.tens = tens;
-	}
-
-	/**
-	 * @return the hundreds
-	 */
-	public int getHundreds() {
-		return hundreds;
-	}
-
-	/**
-	 * @param hundreds the hundreds to set
-	 */
-	public void setHundreds(int hundreds) {
-		this.hundreds = hundreds;
-	}
-
-	/**
-	 * @return the colours
-	 */
-	public ArrayList<UI> getColours() {
-		return colours;
-	}
-
-	/**
-	 * @param colours the colours to set
-	 */
-	public void setColours(ArrayList<UI> colours) {
-		this.colours = colours;
-	}
-
-	/**
-	 * @return the resistors
-	 */
-	public ArrayList<UI> getResistors() {
-		return resistors;
-	}
-
-	/**
-	 * @param resistors the resistors to set
-	 */
-	public void setResistors(ArrayList<UI> resistors) {
-		this.resistors = resistors;
 	}
 
 }
